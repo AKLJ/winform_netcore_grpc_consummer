@@ -15,6 +15,7 @@ Click on create button to create a stock list then click on the read button to c
 
 # So what about Winform and .NET Core ?
 First and foremost the usage is OK. Now let's say the Winform designer (a preview version) is shaky at best. It's definitely worth mentionning I had to kill Visual Studio multiples times when I tried to do some fancy stuffs as... deleting or renaming a button on the designer.
+IMHO, the easiest way to do some quick Winform UI is to use panel tool and do modification directly in cs file.
 Truth to be told, as of now, Microsoft has explained Winform on NET Core is at experimentation phase.
 
 # So what about gRPC and .NET Core ?

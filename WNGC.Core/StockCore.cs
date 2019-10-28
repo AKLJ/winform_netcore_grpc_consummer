@@ -47,6 +47,8 @@ namespace WNGC.Core
                 });
             }
 
+            StockMovements = new ConcurrentBag<StockMovement>();
+
             Parallel.For(0, 10000000, new ParallelOptions() { MaxDegreeOfParallelism = 8 }, (x) =>
             {
                 StockMovements.Add(new StockMovement()

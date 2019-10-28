@@ -8,7 +8,12 @@ namespace WNGC.Stocks.Models
     {
         public Article Article { get; set; }
         public int Count { get; set; }
-        public StockMovementPurpose StockMovementPurpose { get; set; } 
+        public StockMovementPurpose StockMovementPurpose { get; set; }
+
+        public override string ToString()
+        {
+            return $"{StockMovementPurpose.ToString()} on {Count} {Article.Name}";
+        }
     }
 
     public enum StockMovementPurpose
