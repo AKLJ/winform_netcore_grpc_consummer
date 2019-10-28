@@ -13,7 +13,7 @@ namespace WNGC.Stocks.Models
 
     public enum StockMovementPurpose
     {
-        PurchaseOrder,
+        PurchaseOrder = 0,
         Sales,
         B2BReturn,
         B2CReturn

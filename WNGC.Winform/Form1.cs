@@ -17,5 +17,14 @@ namespace WNGC.Winform
             InitializeComponent();
         }
 
+        private void CreateMvtsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReadMvtsButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
