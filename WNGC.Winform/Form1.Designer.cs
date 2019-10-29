@@ -1,4 +1,6 @@
-﻿namespace WNGC.Winform
+﻿using System.Windows.Forms;
+
+namespace WNGC.Winform
 {
     partial class Form1
     {
@@ -28,26 +30,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CreateMvtsButton = new System.Windows.Forms.Button();
             this.ReadMvtsButton = new System.Windows.Forms.Button();
             this.ArticleCountListBox = new System.Windows.Forms.ListBox();
-            this.StockMovementsListView = new System.Windows.Forms.ListView();
             this.ProfitLabel = new System.Windows.Forms.Label();
             this.RevenueLabel = new System.Windows.Forms.Label();
-            // 
-            // CreateMvtsButton
-            // 
-            this.CreateMvtsButton.Location = new System.Drawing.Point(30, 13);
-            this.CreateMvtsButton.Name = "CreateMvtsButton";
-            this.CreateMvtsButton.Size = new System.Drawing.Size(159, 31);
-            this.CreateMvtsButton.TabIndex = 0;
-            this.CreateMvtsButton.Text = "Create Stocks Movements";
-            this.CreateMvtsButton.UseVisualStyleBackColor = true;
-            this.CreateMvtsButton.Click += new System.EventHandler(this.CreateMvtsButton_Click);
+            this.StockMovementListBox = new System.Windows.Forms.ListBox();
             // 
             // ReadMvtsButton
             // 
-            this.ReadMvtsButton.Location = new System.Drawing.Point(30, 65);
+            this.ReadMvtsButton.Location = new System.Drawing.Point(32, 87);
             this.ReadMvtsButton.Name = "ReadMvtsButton";
             this.ReadMvtsButton.Size = new System.Drawing.Size(159, 47);
             this.ReadMvtsButton.TabIndex = 1;
@@ -59,46 +50,45 @@
             // 
             this.ArticleCountListBox.FormattingEnabled = true;
             this.ArticleCountListBox.ItemHeight = 15;
-            this.ArticleCountListBox.Location = new System.Drawing.Point(435, 183);
+            this.ArticleCountListBox.Location = new System.Drawing.Point(426, 11);
             this.ArticleCountListBox.Name = "ArticleCountListBox";
             this.ArticleCountListBox.Size = new System.Drawing.Size(120, 94);
             this.ArticleCountListBox.TabIndex = 2;
             // 
-            // StockMovementsListView
-            // 
-            this.StockMovementsListView.HideSelection = false;
-            this.StockMovementsListView.Location = new System.Drawing.Point(32, 183);
-            this.StockMovementsListView.Name = "StockMovementsListView";
-            this.StockMovementsListView.Size = new System.Drawing.Size(329, 191);
-            this.StockMovementsListView.TabIndex = 3;
-            this.StockMovementsListView.UseCompatibleStateImageBehavior = false;
-            // 
-            // label1
+            // ProfitLabel
             // 
             this.ProfitLabel.AutoSize = true;
-            this.ProfitLabel.Location = new System.Drawing.Point(435, 359);
+            this.ProfitLabel.Location = new System.Drawing.Point(426, 187);
             this.ProfitLabel.Name = "ProfitLabel";
-            this.ProfitLabel.Size = new System.Drawing.Size(38, 15);
+            this.ProfitLabel.Size = new System.Drawing.Size(45, 15);
             this.ProfitLabel.TabIndex = 4;
             this.ProfitLabel.Text = "Profit : ";
             // 
-            // label2
+            // RevenueLabel
             // 
             this.RevenueLabel.AutoSize = true;
-            this.RevenueLabel.Location = new System.Drawing.Point(506, 359);
+            this.RevenueLabel.Location = new System.Drawing.Point(497, 187);
             this.RevenueLabel.Name = "RevenueLabel";
-            this.RevenueLabel.Size = new System.Drawing.Size(38, 15);
+            this.RevenueLabel.Size = new System.Drawing.Size(0, 15);
             this.RevenueLabel.TabIndex = 5;
-            this.RevenueLabel.Text = "";
+            // 
+            // StockMovementListBox
+            // 
+            this.StockMovementListBox.FormattingEnabled = true;
+            this.StockMovementListBox.ItemHeight = 15;
+            this.StockMovementListBox.Location = new System.Drawing.Point(32, 216);
+            this.StockMovementListBox.Name = "StockMovementListBox";
+            this.StockMovementListBox.Size = new System.Drawing.Size(747, 214);
+            this.StockMovementListBox.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.StockMovementListBox);
             this.Controls.Add(this.RevenueLabel);
             this.Controls.Add(this.ProfitLabel);
-            this.Controls.Add(this.StockMovementsListView);
             this.Controls.Add(this.ArticleCountListBox);
             this.Controls.Add(this.ReadMvtsButton);
             this.Controls.Add(this.CreateMvtsButton);
@@ -112,9 +102,9 @@
         private System.Windows.Forms.Button CreateMvtsButton;
         private System.Windows.Forms.Button ReadMvtsButton;
         private System.Windows.Forms.ListBox ArticleCountListBox;
-        private System.Windows.Forms.ListView StockMovementsListView;
         private System.Windows.Forms.Label ProfitLabel;
         private System.Windows.Forms.Label RevenueLabel;
+        private ListBox StockMovementListBox;
     }
 }
 
