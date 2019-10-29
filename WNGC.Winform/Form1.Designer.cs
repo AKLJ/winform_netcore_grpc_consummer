@@ -60,16 +60,17 @@ namespace WNGC.Winform
             this.ProfitLabel.AutoSize = true;
             this.ProfitLabel.Location = new System.Drawing.Point(426, 187);
             this.ProfitLabel.Name = "ProfitLabel";
-            this.ProfitLabel.Size = new System.Drawing.Size(45, 15);
+            this.ProfitLabel.Size = new System.Drawing.Size(145, 15);
             this.ProfitLabel.TabIndex = 4;
-            this.ProfitLabel.Text = "Profit : ";
+            this.ProfitLabel.Text = "Profit (in dollar) : ";
             // 
             // RevenueLabel
             // 
             this.RevenueLabel.AutoSize = true;
-            this.RevenueLabel.Location = new System.Drawing.Point(497, 187);
+            this.RevenueLabel.Location = new System.Drawing.Point(550, 187);
             this.RevenueLabel.Name = "RevenueLabel";
             this.RevenueLabel.Size = new System.Drawing.Size(0, 15);
+            this.RevenueLabel.Text = "0";
             this.RevenueLabel.TabIndex = 5;
             // 
             // StockMovementListBox

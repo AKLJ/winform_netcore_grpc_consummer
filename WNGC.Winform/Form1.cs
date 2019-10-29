@@ -31,6 +31,13 @@ namespace WNGC.Winform
             {
                 StockMovementListBox.Items.Add($"{mvt.MovementPurpose.ToString()} for {mvt.Count} {mvt.Article.Name} by {mvt.Article.Company.Name}");
                 StockMovementListBox.TopIndex = StockMovementListBox.Items.Count - 1;
+                RevenueLabel.Text = mvt.MovementPurpose switch
+                {
+                    StockMovement.Types.Purpose.B2Breturn => (Convert.ToDouble(RevenueLabel.Text) - (mvt.Count * mvt.Article.Price)).ToString("0.00"),
+                    StockMovement.Types.Purpose.B2Creturn => (Convert.ToDouble(RevenueLabel.Text) + (mvt.Count * mvt.Article.Price)).ToString("0.00"),
+                    StockMovement.Types.Purpose.PurchaseOrder => (Convert.ToDouble(RevenueLabel.Text) - (mvt.Count * mvt.Article.Price)).ToString("0.00"),
+                    StockMovement.Types.Purpose.Sales => (Convert.ToDouble(RevenueLabel.Text) + (mvt.Count * mvt.Article.Price)).ToString("0.00"),
+                };
             }
         }
     }
