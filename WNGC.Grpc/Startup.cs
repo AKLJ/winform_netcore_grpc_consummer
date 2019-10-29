@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WNGC.Grpc.Services;
 
 namespace WNGC.Grpc
 {
@@ -31,7 +32,7 @@ namespace WNGC.Grpc
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<StockService>();
 
                 endpoints.MapGet("/", async context =>
                 {

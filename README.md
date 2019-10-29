@@ -19,3 +19,4 @@ IMHO, the easiest way to do some quick Winform UI is to use panel tool and do mo
 Truth to be told, as of now, Microsoft has explained Winform on NET Core is at experimentation phase.
 
 # So what about gRPC and .NET Core ?
+**MAIN PROBLEM : You need to add the generated gRPC class into your project and then delete it in order to use the reference on VS 2019 \o/**

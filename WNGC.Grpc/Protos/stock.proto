@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option csharp_namespace = "WNGC.Grpc";
+
+package StockRPC;
+
+service StockMovementService {
+  rpc GetMovements(Empty) returns (stream StockMovement);
+}
+
+message Company{
+	string Id = 1;
+	string Name = 2;
+}
+message Article{
+	string Id = 1;
+    string Name = 2;
+    double Price = 3;
+    string Description = 4;
+    Company Company = 5;
+}
+message StockMovement{
+	int32 Count = 1;
+	Article Article = 2;
+	enum Purpose {
+		PurchaseOrder = 0;
+		Sales = 1;
+		B2BReturn = 2;
+		B2CReturn = 3;
+  }
+  Purpose MovementPurpose = 4;
+}
+
+message Empty {}
